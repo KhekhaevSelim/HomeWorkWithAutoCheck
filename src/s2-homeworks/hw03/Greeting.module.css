@@ -12,28 +12,28 @@
 
 .input {
 
-    height: 25px;
-    width: 250px;
+    /*height: 25px;*/
+    /*width: 250px;*/
 
 }
 
 .input:focus {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    /* identical to box height */
+    /*font-family: 'Montserrat';*/
+    /*font-style: normal;*/
+    /*font-weight: 500;*/
+    /*font-size: 16px;*/
+    /*line-height: 20px;*/
+    /*!* identical to box height *!*/
 
 
-    color: #000000;
+    /*color: #000000;*/
 }
 
-.errorInput {
-    border: solid red 1px;
-    height: 25px;
-    width: 250px;
-}
+/*.errorInput {*/
+/*    border: solid red 1px;*/
+/*    height: 25px;*/
+/*    width: 250px;*/
+/*}*/
 
 .button {
 

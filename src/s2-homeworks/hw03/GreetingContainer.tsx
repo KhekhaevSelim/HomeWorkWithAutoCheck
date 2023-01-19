@@ -15,8 +15,9 @@ export const pureAddUser = (name: string, setError: (errorText: string)=>void, s
         lastUserName = ""
         setError("Ошибка! Введите имя!")
     } else {
-        totalUsers++;
-        lastUserName = name;
+        totalUsers = totalUsers + 1;
+        let lastsName = name;
+        lastUserName = lastsName;
         addUserCallback(name)
         setName("")
     }
