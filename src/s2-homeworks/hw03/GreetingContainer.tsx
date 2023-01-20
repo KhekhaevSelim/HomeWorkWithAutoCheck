@@ -1,37 +1,36 @@
 import React, { ChangeEvent, KeyboardEvent, useState } from 'react'
+import Greeting from './Greeting'
 import { UserType } from './HW3'
-import {log} from "util";
-import Greeting from "./Greeting";
 
 type GreetingContainerPropsType = {
     users: Array<UserType> // need to fix any
-    addUserCallback: (name:string)=>void // need to fix any
-}
-let totalUsers : number = 0 // need to fix
-let lastUserName : string = "" // need to fix
-export const pureAddUser = (name: string, setError: (errorText: string)=>void, setName: (name:string)=>void, addUserCallback: (name:string)=>void) => {
-    // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
-    if(name.length === 0 || name.includes(" ") ) {
-        lastUserName = ""
-        setError("Ошибка! Введите имя!")
-    } else {
-        totalUsers = totalUsers + 1;
-        let lastsName = name;
-        lastUserName = lastsName;
-        addUserCallback(name)
-        setName("")
-    }
+    addUserCallback: (name:string)=> void // need to fix any
 }
 
-export const pureOnBlur = (name: string, setError: (errorText: string)=>void) => {
-    const check = "  "// если имя пустое - показать ошибку
-    if( name.length === 0 || name.includes(" ")) {
-        lastUserName = ""
+let nnnn:string;
+export const pureAddUser = (name: string, setError: (error:string)=>void, setName: (name:string)=>void, addUserCallback: (name:string)=> void) => {
+    // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
+    if(name.length === 0 || name.includes("    ")){
+        setError("Ошибка! Введите имя!")
+    } else {
+        addUserCallback(name)
+        nnnn=name
+        setName("")
+
+
+    }
+
+
+}
+
+export const pureOnBlur = (name: string, setError: (error:string)=>void) => { // если имя пустое - показать ошибку
+    if(name.length === 0 || name.includes("    ")){
         setError("Ошибка! Введите имя!")
     }
 }
 
 export const pureOnEnter = (e: KeyboardEvent, addUser: ()=>void) => { // если нажата кнопка Enter - добавить
+
     if(e.key === "Enter") {
         addUser()
     }
@@ -54,22 +53,25 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
 
         error && setError('')
     }
+    // let totalUsers = 0 // need to fix
+    // let lastUserName = "c"// need to fix
     const addUser = () => {
         pureAddUser(name, setError, setName, addUserCallback)
+
     }
 
     const onBlur = () => {
         pureOnBlur(name, setError)
     }
 
-    const onEnter = (e: KeyboardEvent) => {
+    const onEnter = (e:KeyboardEvent ) => {
         pureOnEnter(e, addUser)
     }
 
-
+    const totalUsers : number = users.length // need to fix
+    const lastUserName : string = nnnn// need to fix
 
     return (
-
         <Greeting
             name={name}
             setNameCallback={setNameCallback}
@@ -78,9 +80,8 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
             onEnter={onEnter}
             error={error}
             totalUsers={totalUsers}
-            lastUserName={lastUserName}/>
-
-
+            lastUserName={lastUserName}
+        />
     )
 }
 
