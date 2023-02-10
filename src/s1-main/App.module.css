@@ -3,9 +3,19 @@
 }
 
 .hw {
-
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-top: 5%;
 }
 
 .hwTitle {
-/*border : solid 2px red;*/
+    text-align: left;
+    box-shadow: 10px 5px 5px grey;
+    height: 50px;
+    display: flex;
+    align-items: flex-end;
+}
+.hwTitle h3{
+    margin-left: 5%;
 }

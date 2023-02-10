@@ -1,11 +1,17 @@
 .spanBlock {
+
 }
 
 .span {
+    margin: 1%;
+    color : skyblue;
+    font-weight: bold;
 }
 
 .input {
+
 }
 
 .pen {
+
 }
