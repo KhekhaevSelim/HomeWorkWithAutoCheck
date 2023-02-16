@@ -1,4 +1,8 @@
 .select {
+    width: 10vw;
+    height: 5vh;
+    font-family: Montserrat;
+    font-weight: 800;
 }
 
 .select:focus {
@@ -6,4 +10,6 @@
 
 
 .option:hover {
+    background-color: #0066cc;
+
 }
