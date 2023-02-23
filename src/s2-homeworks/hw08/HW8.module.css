@@ -5,19 +5,32 @@
 }
 
 .users {
+    display: flex;
+flex-direction: column;
 }
 
 .buttonsContainer {
+    display: flex;
+    justify-content: end;
+    gap : 10px;
 }
 
 .container {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    gap : 10px;
 }
 
 .thead {
+    background-color: gray;
 }
 
 .nameCol {
+    width: 50vw;
 }
 
 .ageCol {
+    width: 50vw;
+
 }
