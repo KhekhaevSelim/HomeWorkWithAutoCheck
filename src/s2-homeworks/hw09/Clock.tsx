@@ -12,58 +12,62 @@ function Clock() {
     const start = () => {
         // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
         // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
-        let realTime = window.setTimeout(()=> {
+        let realTime = window.setTimeout(() => {
             setDate(new Date(restoreState('hw9-date', Date.now())));
             setTimerId(realTime)
             start();
 
-        },1000)
+        }, 1000)
 
     }
 
     const stop = () => {
         // пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
-    window.clearTimeout(timerId? timerId + 1 : undefined)
+        window.clearTimeout(timerId ? timerId + 1 : undefined)
         setTimerId(undefined)
     }
 
     const onMouseEnter = (e: MouseEvent<HTMLDivElement>) => { // пишут студенты // показать дату если наведена мышка
-        if( (e.clientX > 130 && e.clientX < 190) || (e.clientY < 558 && e.clientY > 579) ){
-           setShow(true)
+        if ((e.clientX > 130 && e.clientX < 190) || (e.clientY < 558 && e.clientY > 579)) {
+            setShow(true)
         }
 
     }
     const onMouseLeave = (e: MouseEvent<HTMLDivElement>) => { // пишут студенты // спрятать дату если мышка не наведена
-        if(( e.clientX !> 90 && e.clientX !< 165) || (e.clientY !> 558 && e.clientY !< 579)){
+        if ((e.clientX ! > 90 && e.clientX ! < 165) || (e.clientY ! > 558 && e.clientY ! < 579)) {
             setShow(false)
 
         }
     }
     const formatterTime = new Intl.DateTimeFormat("en", {
-        hour : "2-digit",
+        hour: "2-digit",
         hour12: false,
         minute: "numeric",
         second: "numeric"
     })
     const formatterWeekDay = new Intl.DateTimeFormat("en", {
-        weekday : "long"
+        weekday: "long"
     })
     const formatterStringDate = new Intl.DateTimeFormat("ru", {
-        day : "numeric",
-        month : "numeric",
+        day: "numeric",
+        month: "numeric",
         year: "numeric"
     })
-    const formatterStringMonth = new Intl.DateTimeFormat("en-US",{
+    const formatterStringMonth = new Intl.DateTimeFormat("en-US", {
         month: "long"
     })
-    const stringTime = formatterTime.format(date) || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
-    const stringDate = formatterStringDate.format(date) || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
+    const stringTime = new Intl.DateTimeFormat("ru", {
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric"
+    }).format(date) || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
+    const stringDate = new Intl.DateTimeFormat("ru").format(date) || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
 
 
-    const stringDay = formatterWeekDay.format(date) || <br/> // пишут студенты
-    const stringMonth = new Intl.DateTimeFormat("en-US",{month: "long"}).format(date) || <br/> // пишут студенты
+    const stringDay = new Intl.DateTimeFormat("en-US", {weekday: "long"}).format(date) || <br/> // пишут студенты
+    const stringMonth = new Intl.DateTimeFormat("en-US", {month: "long"}).format(date) || <br/> // пишут студенты
 
     return (
         <div className={s.clock}>
