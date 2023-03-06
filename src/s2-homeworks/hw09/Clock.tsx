@@ -28,7 +28,7 @@ function Clock() {
     }
 
     const onMouseEnter = (e: MouseEvent<HTMLDivElement>) => { // пишут студенты // показать дату если наведена мышка
-        if( (e.clientX > 90 && e.clientX < 165) || (e.clientY < 558 && e.clientY > 579) ){
+        if( (e.clientX > 130 && e.clientX < 190) || (e.clientY < 558 && e.clientY > 579) ){
            setShow(true)
         }
 
@@ -48,13 +48,13 @@ function Clock() {
     const formatterWeekDay = new Intl.DateTimeFormat("en", {
         weekday : "long"
     })
-    const formatterStringDate = new Intl.DateTimeFormat("en", {
+    const formatterStringDate = new Intl.DateTimeFormat("ru", {
         day : "numeric",
         month : "numeric",
         year: "numeric"
     })
     const formatterStringMonth = new Intl.DateTimeFormat("en",{
-        weekday: "long"
+        month: "long"
     })
     const stringTime = formatterTime.format(date) || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
     const stringDate = formatterStringDate.format(date) || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
