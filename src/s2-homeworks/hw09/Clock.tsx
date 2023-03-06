@@ -53,7 +53,7 @@ function Clock() {
         month : "numeric",
         year: "numeric"
     })
-    const formatterStringMonth = new Intl.DateTimeFormat("en",{
+    const formatterStringMonth = new Intl.DateTimeFormat("en-US",{
         month: "long"
     })
     const stringTime = formatterTime.format(date) || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
@@ -63,7 +63,7 @@ function Clock() {
 
 
     const stringDay = formatterWeekDay.format(date) || <br/> // пишут студенты
-    const stringMonth = formatterStringMonth.format(date) || <br/> // пишут студенты
+    const stringMonth = new Intl.DateTimeFormat("en-US",{month: "long"}).format(date) || <br/> // пишут студенты
 
     return (
         <div className={s.clock}>
