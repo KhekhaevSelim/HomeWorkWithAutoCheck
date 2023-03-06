@@ -1,4 +1,4 @@
-import React, {useState, MouseEvent} from 'react'
+import React, {useState} from 'react'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import {restoreState} from '../hw06/localStorage/localStorage'
 import s from './Clock.module.css'
@@ -12,50 +12,42 @@ function Clock() {
     const start = () => {
         // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
         // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
-        let realTime = window.setTimeout(() => {
-            setDate(new Date(restoreState('hw9-date', Date.now())));
-            setTimerId(realTime)
-            start();
-
+        stop()
+        const realTime = +setInterval(() => {
+            setDate(new Date());
         }, 1000)
-
+        setTimerId(realTime)
     }
 
     const stop = () => {
         // пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
-        window.clearTimeout(timerId ? timerId + 1 : undefined)
+        clearInterval(timerId)
         setTimerId(undefined)
     }
 
-    const onMouseEnter = (e: MouseEvent<HTMLDivElement>) => { // пишут студенты // показать дату если наведена мышка
-        if ((e.clientX > 130 && e.clientX < 190) || (e.clientY < 558 && e.clientY > 579)) {
-            setShow(true)
-        }
-
+    const onMouseEnter = () => { // пишут студенты // показать дату если наведена мышка
+        setShow(true)
     }
-    const onMouseLeave = (e: MouseEvent<HTMLDivElement>) => { // пишут студенты // спрятать дату если мышка не наведена
-        if ((e.clientX ! > 90 && e.clientX ! < 165) || (e.clientY ! > 558 && e.clientY ! < 579)) {
-            setShow(false)
-
-        }
+    const onMouseLeave = () => { // пишут студенты // спрятать дату если мышка не наведена
+        setShow(false)
     }
-    const formatterTime = new Intl.DateTimeFormat("en", {
-        hour: "2-digit",
-        hour12: false,
-        minute: "numeric",
-        second: "numeric"
-    })
-    const formatterWeekDay = new Intl.DateTimeFormat("en", {
-        weekday: "long"
-    })
-    const formatterStringDate = new Intl.DateTimeFormat("ru", {
-        day: "numeric",
-        month: "numeric",
-        year: "numeric"
-    })
-    const formatterStringMonth = new Intl.DateTimeFormat("en-US", {
-        month: "long"
-    })
+    // const formatterTime = new Intl.DateTimeFormat("en", {
+    //     hour: "2-digit",
+    //     hour12: false,
+    //     minute: "numeric",
+    //     second: "numeric"
+    // })
+    // const formatterWeekDay = new Intl.DateTimeFormat("en", {
+    //     weekday: "long"
+    // })
+    // const formatterStringDate = new Intl.DateTimeFormat("ru", {
+    //     day: "numeric",
+    //     month: "numeric",
+    //     year: "numeric"
+    // })
+    // const formatterStringMonth = new Intl.DateTimeFormat("en-US", {
+    //     month: "long"
+    // })
     const stringTime = new Intl.DateTimeFormat("ru", {
         hour: "numeric",
         minute: "numeric",
