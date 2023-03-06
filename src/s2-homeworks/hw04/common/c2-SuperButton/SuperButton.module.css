@@ -1,7 +1,8 @@
 .button {
     width: 100px;
-    height: 25px;
+    height: 35px;
     border: none;
+    border-radius: 10px;
 }
 
 .disabled {

@@ -1,7 +1,15 @@
 .buttonsContainer {
+    display: flex;
+    gap: 5%;
+}
+.buttonsContainer SuperButton{
+    border-radius: 10%;
 }
 
 .clock {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .watch {
@@ -11,4 +19,6 @@
 }
 
 .more {
+    color : gray;
+    font-weight: 100;
 }
