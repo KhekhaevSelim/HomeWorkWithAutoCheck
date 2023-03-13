@@ -1,3 +1,6 @@
 .loader {
-    /*свг и/или анимация*/
+    background-image: url("../../../public/loader.webp");
+    width: 180px;
+    height: 180px;
+
 }
