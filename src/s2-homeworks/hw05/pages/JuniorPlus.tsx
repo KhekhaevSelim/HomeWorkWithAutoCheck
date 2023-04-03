@@ -4,6 +4,7 @@ import {Provider} from "react-redux";
 import store from "../../hw10/bll/store";
 import HW11 from '../../hw11/HW11';
 import HW12 from "../../hw12/HW12";
+import HW13 from "../../hw13/HW13";
 
 
 function JuniorPlus() {
@@ -14,7 +15,7 @@ function JuniorPlus() {
             </Provider>
             <HW11 />
             <HW12 />
-            {/*<HW13 />*/}
+            <HW13 />
             {/*<HW14 />*/}
             {/*<HW15 />*/}
         </div>

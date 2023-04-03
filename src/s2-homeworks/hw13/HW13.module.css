@@ -2,6 +2,7 @@
 }
 
 .responseContainer {
+    position: relative;
 }
 
 .imageContainer {
@@ -14,9 +15,33 @@
 }
 
 .code {
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 30px;
+    font-weight: 500;
+    color: black;
+    position: absolute;
+    left : 50%;
+    top : 50%;
 }
 
 .text {
+    position: absolute;
+  left: 50%;
+    top: 65%;
+
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
 }
 .info {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
 }
