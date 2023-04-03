@@ -1,22 +1,26 @@
 {
   "files": {
-    "main.css": "/HomeWorkWithAutoCheck/static/css/main.3dc6bbeb.css",
-    "main.js": "/HomeWorkWithAutoCheck/static/js/main.b3393033.js",
+    "main.css": "/HomeWorkWithAutoCheck/static/css/main.b2b50f22.css",
+    "main.js": "/HomeWorkWithAutoCheck/static/js/main.d7c17e2c.js",
     "static/js/787.66cb4309.chunk.js": "/HomeWorkWithAutoCheck/static/js/787.66cb4309.chunk.js",
     "static/media/avatar.png": "/HomeWorkWithAutoCheck/static/media/avatar.d947cb9d0d13765666b6.png",
     "static/media/loader.webp": "/HomeWorkWithAutoCheck/static/media/loader.98a52c321269b4439f31.webp",
+    "static/media/200.svg": "/HomeWorkWithAutoCheck/static/media/200.96248f7df0dde10e0a82ac30418f50bc.svg",
+    "static/media/error.svg": "/HomeWorkWithAutoCheck/static/media/error.5a3135f381b00b53044eff200e725391.svg",
+    "static/media/500.svg": "/HomeWorkWithAutoCheck/static/media/500.adbc5f265f6f3c1fb9c5633ffe365afa.svg",
+    "static/media/400.svg": "/HomeWorkWithAutoCheck/static/media/400.8baa1b795048b6fa13ff8d30800aa1b1.svg",
     "static/media/404.svg": "/HomeWorkWithAutoCheck/static/media/404.9ec31c0ba8d95b0480272e46af98c955.svg",
     "static/media/closeOutline.svg": "/HomeWorkWithAutoCheck/static/media/closeOutline.b64ba402fac8a549bc2de97e9cf84a61.svg",
     "static/media/editIcon.svg": "/HomeWorkWithAutoCheck/static/media/editIcon.0a0cefd2190b593b4f76bb1a5afe0c1f.svg",
     "static/media/checked.svg": "/HomeWorkWithAutoCheck/static/media/checked.b75ca55e8759862b4083.svg",
     "index.html": "/HomeWorkWithAutoCheck/index.html",
     "static/media/burger.svg": "/HomeWorkWithAutoCheck/static/media/burger.700e416f7bfe3697f96b36c778d25355.svg",
-    "main.3dc6bbeb.css.map": "/HomeWorkWithAutoCheck/static/css/main.3dc6bbeb.css.map",
-    "main.b3393033.js.map": "/HomeWorkWithAutoCheck/static/js/main.b3393033.js.map",
+    "main.b2b50f22.css.map": "/HomeWorkWithAutoCheck/static/css/main.b2b50f22.css.map",
+    "main.d7c17e2c.js.map": "/HomeWorkWithAutoCheck/static/js/main.d7c17e2c.js.map",
     "787.66cb4309.chunk.js.map": "/HomeWorkWithAutoCheck/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3dc6bbeb.css",
-    "static/js/main.b3393033.js"
+    "static/css/main.b2b50f22.css",
+    "static/js/main.d7c17e2c.js"
   ]
 }
