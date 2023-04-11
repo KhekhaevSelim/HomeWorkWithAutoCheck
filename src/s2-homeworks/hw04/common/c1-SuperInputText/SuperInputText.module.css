@@ -4,7 +4,9 @@
 
 .input {
     outline: none;
-    border: 2px solid black;
+    /*border: 2px solid #208fa2;*/
+    width: 300px;
+    height: 30px;
 }
 
 .inputWrapper {
@@ -21,6 +23,7 @@
 }
 
 .errorInput:focus {
+    border : 2px blue solid;
 }
 
 .error {
