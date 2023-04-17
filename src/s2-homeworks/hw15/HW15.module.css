@@ -16,10 +16,14 @@
 
 .row {
     display: flex;
+    width: 60vw;
+    border-bottom: solid grey 1px;
 }
 
 .rowHeader {
+    width: 60vw;
     display: flex;
+    background-color: darkgrey;
 }
 
 .loading {

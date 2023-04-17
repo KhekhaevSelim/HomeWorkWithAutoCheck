@@ -1,11 +1,35 @@
 .pagination {
+    width: 55vw;
     display: flex;
+    /*justify-content: space-between;*/
+    gap : 20px;
+    align-items: center;
 }
 
 .text1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height */
 
+
+    /* Neutral Dark/-80 */
+
+    color: #0D0B0C;
 }
 
 .text2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height */
 
+
+    /* Neutral Dark/-80 */
+
+    color: #0D0B0C;
 }
