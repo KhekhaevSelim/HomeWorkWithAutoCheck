@@ -73,13 +73,13 @@ const HW15 = () => {
 
     const onChangeSort = (newSort: string) => {
         // делает студент
-        // const params = Object.fromEntries(searchParams)
+        const params = Object.fromEntries(searchParams)
         // setSort(
         // setPage(1) // при сортировке сбрасывать на 1 страницу
         setPage(1)
         setSort(newSort)
         sendQuery({sort : newSort, page : page, count : count})
-        setSearchParams({sort : newSort})
+        setSearchParams(params)
         // sendQuery(
         // setSearchParams(
 
@@ -93,8 +93,9 @@ const HW15 = () => {
         setCount(+params.count || 4)
     }, [])
 
-    const mappedTechs = techs.map(t => (
-        <div key={t.id} className={s.row}>
+    const mappedTechs = techs.map(t => {
+        console.log('hw15-tech-' + t.id)
+        return <div key={t.id} className={s.row}>
             <div id={'hw15-tech-' + t.id} className={s.tech}>
                 {t.tech}
             </div>
@@ -103,7 +104,7 @@ const HW15 = () => {
                 {t.developer}
             </div>
         </div>
-    ))
+        })
 
     return (
         <div id={'hw15'}>
